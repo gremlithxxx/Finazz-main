@@ -1,0 +1,186 @@
+
+.finazz-sidebar {
+  width: 258px;
+  min-width: 258px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 29px 17px 20px;
+  background: #191C19;
+  color: #F8F7F2;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 4px 9px 38px;
+}
+
+.sidebar-brand-icon {
+  color: #B8D5BE;
+  display: flex;
+}
+
+.sidebar-brand-name {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  letter-spacing: 3px;
+}
+
+.sidebar-brand-caption {
+  margin-top: 5px;
+  color: #A3ACA1;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+}
+
+.sidebar-section-label {
+  padding: 0 11px 13px;
+  color: #8F998E;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-link {
+  width: 100%;
+  min-height: 45px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #C8CEC7;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.sidebar-link:hover {
+  background: #272C27;
+  color: #FFFFFF;
+}
+
+.sidebar-link.active {
+  color: #E7F1E7;
+  background: #34483A;
+  border-color: #455B49;
+}
+
+.sidebar-link.active svg {
+  color: #B8D5BE;
+}
+
+.sidebar-link span:nth-child(2) {
+  flex: 1;
+}
+
+.sidebar-soon {
+  color: #829083;
+  letter-spacing: 1px;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: #343934;
+  margin: 22px 5px 14px;
+}
+
+.sidebar-settings {
+  margin-bottom: 17px;
+}
+
+.sidebar-security {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px 10px;
+  border: 1px solid #353D35;
+  border-radius: 10px;
+  color: #B8D5BE;
+}
+
+.sidebar-security div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-security strong {
+  color: #E2E8DF;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.sidebar-security span {
+  color: #9AA59A;
+  font-size: 10px;
+}
+
+.sidebar-logout {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #D5D8D2;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-logout:hover {
+  color: #FFFFFF;
+  background: #302A28;
+}
+
+@media (max-width: 900px) {
+  .finazz-sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 650px) {
+  .finazz-sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .sidebar-brand {
+    padding-bottom: 20px;
+  }
+
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sidebar-section-label,
+  .sidebar-bottom {
+    display: none;
+  }
+}

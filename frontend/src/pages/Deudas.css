@@ -1,0 +1,50 @@
+```css
+.deudas-layout{min-height:100vh;display:flex;background:#f5f7fb;color:#172033;font-family:Inter,system-ui,sans-serif}
+.deudas-main{flex:1;min-width:0}
+.deudas-contenido{max-width:1400px;margin:auto;padding:32px}
+.deudas-hero{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:26px}
+.deudas-eyebrow{font-size:11px;font-weight:800;letter-spacing:1.5px;color:#16866b}
+.deudas-hero h1{font-size:clamp(26px,3vw,36px);letter-spacing:-1px;margin:8px 0}
+.deudas-hero p,.deudas-panel-titulo p{color:#788397;font-size:14px;margin:0}
+.deudas-hero-icon,.deudas-card-icon{display:grid;place-items:center;background:#e2f6ef;color:#16866b;border-radius:15px;flex-shrink:0}
+.deudas-hero-icon{width:62px;height:62px}
+.deudas-resumen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:24px}
+.deudas-resumen article,.deudas-panel{background:white;border:1px solid #e8ecf3;border-radius:17px;box-shadow:0 4px 18px #14233c08}
+.deudas-resumen article{padding:23px;display:flex;flex-direction:column;gap:12px}
+.deudas-resumen span{color:#788397;font-size:13px}
+.deudas-resumen strong{font-size:clamp(20px,2.5vw,28px);overflow-wrap:anywhere}
+.deudas-panel{padding:26px;margin-bottom:24px}
+.deudas-panel-titulo{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:23px}
+.deudas-panel-titulo h2{font-size:20px;margin:0 0 7px}
+.deudas-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:end}
+.deudas-form label,.deudas-modal label{display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:650;color:#3d485b}
+.deudas-form input,.deudas-form select,.deudas-modal input{box-sizing:border-box;width:100%;min-width:0;padding:13px;border:1px solid #dfe5ee;border-radius:10px;background:white;color:#172033;font:inherit;font-weight:400;outline:none}
+.deudas-form input:focus,.deudas-form select:focus,.deudas-modal input:focus{border-color:#16866b;box-shadow:0 0 0 3px #16866b1a}
+.deudas-btn{min-height:41px;padding:10px 14px;display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:10px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.deudas-btn.primario{background:#16866b;color:white}
+.deudas-btn.neutro{background:#f0f3f8;color:#354158}
+.deudas-btn.peligro{background:#fff0f0;color:#bd4141}
+.deudas-lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.deudas-item{min-width:0;padding:21px;border:1px solid #e8ecf3;border-radius:15px}
+.deudas-item-top{display:flex;align-items:center;gap:12px}
+.deudas-card-icon{width:46px;height:46px}
+.deudas-item-nombre{flex:1;min-width:0}
+.deudas-item-nombre h3{font-size:16px;margin:0 0 5px;overflow-wrap:anywhere}
+.deudas-item-nombre span{font-size:12px;color:#8993a4}
+.deudas-saldo{font-size:17px;color:#bd4141;overflow-wrap:anywhere}
+.deudas-barra{height:8px;background:#eaf0f4;border-radius:99px;overflow:hidden;margin:22px 0 12px}
+.deudas-barra div{height:100%;background:#16866b;border-radius:inherit}
+.deudas-cantidades{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:#788397;font-size:12px}
+.deudas-acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.deudas-alerta{padding:13px 16px;border-radius:10px;margin-bottom:18px;font-size:14px}
+.deudas-alerta.error{color:#a52f2f;background:#fff0f0}
+.deudas-alerta.exito{color:#12684e;background:#e5f8ef}
+.deudas-vacio{min-height:140px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;color:#8993a4;text-align:center}
+.deudas-vacio strong{color:#354158}
+.deudas-modal-fondo{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:#121d307a}
+.deudas-modal{box-sizing:border-box;width:100%;max-width:440px;padding:28px;background:white;border-radius:18px}
+.deudas-modal h2{margin:0 0 10px}
+.deudas-modal p{color:#788397;margin-bottom:24px}
+@media(max-width:900px){.deudas-lista{grid-template-columns:1fr}}
+@media(max-width:650px){.deudas-contenido{padding:20px 14px}.deudas-resumen,.deudas-form{grid-template-columns:1fr}.deudas-panel{padding:18px}.deudas-hero h1{font-size:27px}.deudas-hero-icon{width:48px;height:48px}}
+```

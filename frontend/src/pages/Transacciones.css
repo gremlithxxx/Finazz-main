@@ -1,0 +1,565 @@
+
+.transacciones-layout {
+  min-height: 100vh;
+  background: #f6f8f7;
+  color: #20332b;
+}
+
+.transacciones-main {
+  min-height: 100vh;
+  margin-left: 260px;
+  min-width: 0;
+}
+
+.transacciones-contenido {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.transacciones-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.transacciones-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #56816b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.transacciones-titulo h1 {
+  margin: 0;
+  color: #20382d;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.transacciones-titulo p,
+.transacciones-panel-cabecera p {
+  margin: 8px 0 0;
+  color: #7a8981;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.transacciones-boton-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border: 1px solid #dce6df;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #355a44;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.transacciones-boton-secundario:hover {
+  border-color: #9fbea9;
+  background: #f0f7f2;
+}
+
+.transacciones-boton-secundario:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.transacciones-resumen {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.transacciones-resumen-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e6ece8;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgb(32 51 43 / 3%);
+}
+
+.transacciones-resumen-icono {
+  display: flex;
+  width: 43px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 12px;
+}
+
+.transacciones-resumen-icono.ingreso {
+  background: #e6f5eb;
+  color: #25804d;
+}
+
+.transacciones-resumen-icono.gasto {
+  background: #fff0e9;
+  color: #c55e3d;
+}
+
+.transacciones-resumen-icono.balance {
+  background: #edf0ff;
+  color: #5667ba;
+}
+
+.transacciones-resumen-card > span {
+  display: block;
+  color: #74847a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.transacciones-resumen-card > strong {
+  display: block;
+  overflow-wrap: anywhere;
+  margin-top: 8px;
+  color: #253c30;
+  font-size: clamp(20px, 2.2vw, 27px);
+  font-weight: 750;
+}
+
+.transacciones-resumen-card > small {
+  display: block;
+  margin-top: 8px;
+  color: #8b9890;
+  font-size: 11px;
+}
+
+.transacciones-alerta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 13px 15px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.transacciones-alerta.error {
+  border-color: #f1c8c3;
+  background: #fff3f1;
+  color: #a3362c;
+}
+
+.transacciones-alerta.exito {
+  border-color: #cce7d3;
+  background: #edf8f0;
+  color: #286b40;
+}
+
+.transacciones-columnas {
+  display: grid;
+  grid-template-columns: minmax(290px, 0.8fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.transacciones-panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e5ece7;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgb(32 51 43 / 3%);
+}
+
+.transacciones-panel-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 23px 22px 18px;
+  color: #47765a;
+}
+
+.transacciones-panel-cabecera h2 {
+  margin: 0;
+  color: #294034;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.transacciones-panel-cabecera p {
+  font-size: 12px;
+}
+
+.transacciones-tipo-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin: 0 22px 22px;
+  padding: 5px;
+  border-radius: 11px;
+  background: #f2f5f3;
+}
+
+.transacciones-tipo-selector button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #7c8981;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.transacciones-tipo-selector button.seleccionado.ingreso {
+  background: #ffffff;
+  color: #28784a;
+  box-shadow: 0 2px 7px rgb(25 55 37 / 7%);
+}
+
+.transacciones-tipo-selector button.seleccionado.gasto {
+  background: #ffffff;
+  color: #c05c40;
+  box-shadow: 0 2px 7px rgb(25 55 37 / 7%);
+}
+
+.transacciones-form-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 0 22px 23px;
+}
+
+.transacciones-campo {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transacciones-campo label {
+  color: #43594b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.transacciones-campo input,
+.transacciones-campo select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 11px 12px;
+  border: 1px solid #dce6df;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #294034;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.transacciones-campo input::placeholder {
+  color: #a2ada6;
+}
+
+.transacciones-campo input:focus,
+.transacciones-campo select:focus {
+  border-color: #72a785;
+  box-shadow: 0 0 0 3px rgb(91 154 112 / 12%);
+}
+
+.transacciones-monto-input {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #dce6df;
+  border-radius: 9px;
+}
+
+.transacciones-monto-input:focus-within {
+  border-color: #72a785;
+  box-shadow: 0 0 0 3px rgb(91 154 112 / 12%);
+}
+
+.transacciones-monto-input > span {
+  padding-left: 13px;
+  color: #6b8373;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transacciones-monto-input input {
+  border: 0;
+  box-shadow: none !important;
+}
+
+.transacciones-guardar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 2px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #2d6746;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.transacciones-guardar:hover {
+  background: #24563a;
+}
+
+.transacciones-guardar.guardar-gasto {
+  background: #b85b42;
+}
+
+.transacciones-guardar.guardar-gasto:hover {
+  background: #9f4933;
+}
+
+.transacciones-guardar:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.transacciones-panel-cabecera.lista {
+  align-items: center;
+}
+
+.transacciones-contador {
+  display: flex;
+  min-width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border-radius: 9px;
+  background: #edf5ef;
+  color: #39724d;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.transacciones-filtros {
+  display: flex;
+  gap: 7px;
+  padding: 0 22px 17px;
+}
+
+.transacciones-filtros button {
+  padding: 8px 12px;
+  border: 1px solid #e4ebe6;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #75837a;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.transacciones-filtros button.activo {
+  border-color: #c7dfce;
+  background: #edf6ef;
+  color: #2d7145;
+}
+
+.transacciones-tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.transacciones-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.transacciones-tabla th {
+  padding: 12px 15px;
+  border-top: 1px solid #edf0ee;
+  border-bottom: 1px solid #edf0ee;
+  background: #fafcfb;
+  color: #89968e;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.transacciones-tabla td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f3f1;
+  color: #66776c;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.transacciones-tabla tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.transacciones-movimiento-nombre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.movimiento-icono {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.movimiento-icono.ingreso {
+  background: #e9f6ed;
+  color: #29804b;
+}
+
+.movimiento-icono.gasto {
+  background: #fff0eb;
+  color: #bf6044;
+}
+
+.transacciones-movimiento-nombre > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.transacciones-movimiento-nombre strong {
+  max-width: 180px;
+  overflow: hidden;
+  color: #304638;
+  font-size: 12px;
+  text-overflow: ellipsis;
+}
+
+.transacciones-movimiento-nombre small {
+  color: #93a097;
+  font-size: 10px;
+}
+
+.transacciones-tabla td.monto-ingreso {
+  color: #27804a;
+  font-weight: 750;
+}
+
+.transacciones-tabla td.monto-gasto {
+  color: #bd5d42;
+  font-weight: 750;
+}
+
+.transacciones-vacio {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 25px;
+  color: #94a198;
+  text-align: center;
+}
+
+.transacciones-vacio strong {
+  color: #53685a;
+  font-size: 13px;
+}
+
+.transacciones-vacio span {
+  max-width: 260px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1150px) {
+  .transacciones-main {
+    margin-left: 230px;
+  }
+
+  .transacciones-contenido {
+    padding: 23px;
+  }
+
+  .transacciones-columnas {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .transacciones-main {
+    margin-left: 0;
+  }
+
+  .transacciones-contenido {
+    padding: 18px 14px 28px;
+  }
+
+  .transacciones-titulo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .transacciones-resumen {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .transacciones-resumen-card {
+    padding: 17px;
+  }
+
+  .transacciones-resumen-icono {
+    margin-bottom: 11px;
+  }
+
+  .transacciones-panel-cabecera {
+    padding: 19px 16px 15px;
+  }
+
+  .transacciones-tipo-selector {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .transacciones-form-panel form {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .transacciones-filtros {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .transacciones-tabla th,
+  .transacciones-tabla td {
+    padding: 12px 10px;
+  }
+}

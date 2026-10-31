@@ -1,0 +1,79 @@
+
+.finazz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 31px;
+}
+
+.header-eyebrow {
+  color: #6F9276;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+}
+
+.header-heading h1 {
+  margin: 9px 0 7px;
+  color: #20241F;
+  font-family: Georgia, serif;
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 400;
+}
+
+.header-heading p {
+  margin: 0;
+  color: #7C8078;
+  font-size: 13px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-date {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #686E65;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.header-date svg {
+  color: #718D74;
+}
+
+.header-avatar {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #31533C;
+  background: #DFE9DD;
+}
+
+@media (max-width: 650px) {
+  .finazz-header {
+    align-items: flex-start;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .header-date {
+    display: none;
+  }
+
+  .header-heading p {
+    max-width: 240px;
+    line-height: 1.6;
+  }
+}

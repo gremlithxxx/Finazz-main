@@ -1,0 +1,58 @@
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import { obtenerToken } from "./services/authService";
+import Presupuestos from "./pages/Presupuestos";
+
+import "./styles/variables.css";
+
+function RutaProtegida({ children }) {
+  const token = obtenerToken();
+
+  if (!token) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return children;
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<Navigate to="/dashboard" replace />}
+        />
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        <Route
+          path="/dashboard"
+          element={
+            <RutaProtegida>
+              <Dashboard />
+            </RutaProtegida>
+          }
+        />
+
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
